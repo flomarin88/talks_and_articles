@@ -5,18 +5,20 @@
 * Schéma Début vs Fin
 * /!\ Disclaimer : Vision Produit / Orga / Équipe
 
+## Découpage en services
+- Monolith first (only), le plus longtemps possible même si l'organisation bouge
+
 ## Loi de Conway 
 * Monolith First et vite dévié vers une explosion en _micro_services, car l'organisation / l'équipe nous a contraint
 * Eviter l'anticipation des problèmes => Over Engineering
 * Multiplication des repos, se faire une raison, tu ne verras pas tout ce qui est développé => Importance de la communication
 
+## Gestion des versions et Communication entre les services
 - Carte d'identité du service
     - Nom (ajouté du fun, un univers particulier)
     - Ce qu'il fait, Ce qu'il ne fait pas
     - Qui le maintient ? Faut il un PM ?
     - 
-
-## Gestion des versions et Communication entre les services
 - Messages (RabbitMq) : Autre paradigme de développement
 - HTTP
 - Les services sont censés être indépendants, difficile à assurer à cause de la communication (Messages / API)
@@ -27,8 +29,9 @@
 - En isolation, très simple , tout en respectant la pyramide des tests
 - Pour un lot de services, les choses se compliquent
 - Environnement dédié pour la CI et executable en local => /!\ temps de cycle
+    + 
 
-## Gestion des sujets de fond / transverses
+## Gestion des sujets de fond / transverses / Outillage
 - Dette technique transverse
 - Services commun
 - Expérimentations
@@ -37,7 +40,7 @@
 - Là encore la communication est importante (lib commune, conduite du changement, ...)
 
 ##  Take Away
-- *Communiquer et encore communiquer pour clarifier et éviter l'over engineering*
+- *Communiquer et encore communiquer pour clarifier et éviter l'over engineering* - Loi de Conway
 - *Automatiser pour gagner en fiabilité / sérenité / productivité*
 - *Collecter / Analyser pour anticiper / décider*
 
